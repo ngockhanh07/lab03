@@ -8,27 +8,27 @@
 <title>CWA Help Desk Appointments</title>
 </head>
 <body>
-<form action="submit.php" method="post">
+<form action="submit" method="post">
 <fieldset>
 <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Logo_of_Swinburne_University_of_Technology.svg">
 <h1>CWA Help Desk Appointments</h1>
 <p>The Help Desk is located in ATC620. Open 10:30 to 19:00 Monday to Friday</p>
 <p>Check Blackboard for when CWA tutors will be there.</p>
-<form action="submit.php" method="post">
+<form action="submit" method="post">
 <fieldset>
 <legend>Student details</legend>
 <p>
 <label for="studentID">StudentID:</label>
-<input type="text"id="studentID" required pattern="\d{7,10}">
+<input type="text"id="studentID" pattern="\d{7,10}">
 </p>
 <br>
 <label for="Givenname">Given name:</label>
-<input type="text"id="Givenname" required pattern="[A-Za-z\d]{,15}$">
-<label type="text"id="familyName">Family Name:</label>
-<input type="text"id="familyName" required pattern="[A-Za-z\d]{,15}$">
+<input type="text"id="Givenname" required pattern="[A-Za-z]{1,15}">
+<label for="familyname">Family name:</label>
+<input type="text"id="familyName" required pattern="[A-Za-z]{1,15}">
 </fieldset>
 </form>
-<form action="submit.php" method="post">
+<form action="submit" method="post">
 <fieldset>
 <legend>Your unit</legend>
 <p>
@@ -46,7 +46,7 @@
 </select>
 </fieldset>
 </form>
-<form action="submit.php" method="post">
+<form action="submit" method="post">
 <fieldset>
 <legend>Issue</legend>
 <p>
@@ -67,7 +67,7 @@
 <textarea id="description" name="description" rows="4" placeholder="Write description of your problem here..."required></textarea>
 </fieldset>
 </form>
-<form action="submit.php" method="post">
+<form action="submit" method="post">
 <fieldset>
 <legend>Preferred Date/Time</legend>
 <p>
@@ -79,9 +79,9 @@
 <input type="time"id="time" placeholder="00:00" required pattern="\d{2}:\d{2}">
 </fieldset>
 </form>
-<form action="submit.php" method="post">
+<form action="submit" method="post">
 <fieldset>
-<button>Book</button>
+<button type="submit">Book</button>
 <button>Reset form</button>
 </fieldset>
 </form>
