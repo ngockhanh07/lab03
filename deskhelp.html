@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="appointments for students at Swinburne Unniversity">
+<meta name="keyword" content="appointments, students, Swinburne">
+<meta name="author" content ="Vuong Thi Ngoc Khanh">
+<title>CWA Help Desk Appointments</title>
+</head>
+<body>
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Logo_of_Swinburne_University_of_Technology.svg">
+<h1>CWA Help Desk Appointments</h1>
+<p>The Help Desk is located in ATC620. Open 10:30 to 19:00 Monday to Friday</p>
+<p>Check Blackboard for when CWA tutors will be there.</p>
+<form action="submit.php" method="post">
+<fieldset>
+<legend>Student details</legend>
+<label for="studentID">StudentID:</label>
+<input type="text"id="studentID" required pattern="\d{7,10}">
+<br>
+<label for="Givenname">Given name:</label>
+<input type="text"id="Givenname" required pattern="[A-Za-z\d]{,15}$">
+<label type="text"id="familyName">Family Name:</label>
+<input type="text"id="familyName" required pattern="[A-Za-z\d]{,15}$">
+</fieldset>
+</form>
+<form action="submit.php" method="post">
+<fieldset>
+<legend>Your unit</legend>
+<input type="checkbox" id="COS10011" required>
+<label for="choice">COS10011</label>
+<input type="checkbox" id="COS60004" required>
+<label for="choice">COS60004</label>
+<input type="checkbox" id="COS60007" required>
+<label for="choice">COS60007</label>
+<br>
+<label for="tutors">Your Tutor</label>
+<select name="tutor" id="tutor" required>
+  <option value="">Please select</option>
+</select>
+</fieldset>
+</form>
+<form action="submit.php" method="post">
+<fieldset>
+<legend>Issue</legend>
+<label for="subject">HTML</label>
+<input type="checkbox" id="html" required>
+<label for="subject">CSS</label>
+<input type="checkbox" id="CSS" required>
+<label for="subject">JavaScript</label>
+<input type="checkbox" id="JavaScript" required>
+<label for="subject">PHP</label>
+<input type="checkbox" id="PHP" required>
+<label for="subject">My SQL</label>
+<input type="checkbox" id="My SQL" required>
+<br>
+<label for="description">Description of Issue</label>
+<textarea id="description" name="description" rows="4" placeholder="Write description of your problem here..."required></textarea>
+</fieldset>
+</form>
+<form action="submit.php" method="post">
+<fieldset>
+<legend>Preferred Date/Time</legend>
+<label for="date">Date</label>
+<input type="datetime" id="datetime" placeholder="dd/mm/yyyy" required pattern="\d{2}/\d{2}/\d{4}">
+<br>
+<label for="time">Time</label>
+<input type="time"id="time" placeholder="00:00" required pattern="\d{2}:\d{2}">
+</fieldset>
+</form>
+</body>
+</html>
