@@ -8,6 +8,8 @@
 <title>CWA Help Desk Appointments</title>
 </head>
 <body>
+<form action="submit.php" method="post">
+<fieldset>
 <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Logo_of_Swinburne_University_of_Technology.svg">
 <h1>CWA Help Desk Appointments</h1>
 <p>The Help Desk is located in ATC620. Open 10:30 to 19:00 Monday to Friday</p>
@@ -15,8 +17,10 @@
 <form action="submit.php" method="post">
 <fieldset>
 <legend>Student details</legend>
+<p>
 <label for="studentID">StudentID:</label>
 <input type="text"id="studentID" required pattern="\d{7,10}">
+</p>
 <br>
 <label for="Givenname">Given name:</label>
 <input type="text"id="Givenname" required pattern="[A-Za-z\d]{,15}$">
@@ -27,12 +31,14 @@
 <form action="submit.php" method="post">
 <fieldset>
 <legend>Your unit</legend>
+<p>
 <input type="checkbox" id="COS10011" required>
 <label for="choice">COS10011</label>
 <input type="checkbox" id="COS60004" required>
 <label for="choice">COS60004</label>
 <input type="checkbox" id="COS60007" required>
 <label for="choice">COS60007</label>
+</p>
 <br>
 <label for="tutors">Your Tutor</label>
 <select name="tutor" id="tutor" required>
@@ -43,6 +49,7 @@
 <form action="submit.php" method="post">
 <fieldset>
 <legend>Issue</legend>
+<p>
 <label for="subject">HTML</label>
 <input type="checkbox" id="html" required>
 <label for="subject">CSS</label>
@@ -54,6 +61,7 @@
 <label for="subject">My SQL</label>
 <input type="checkbox" id="My SQL" required>
 <br>
+</p>
 <label for="description">Description of Issue</label>
 <br>
 <textarea id="description" name="description" rows="4" placeholder="Write description of your problem here..."required></textarea>
@@ -62,11 +70,21 @@
 <form action="submit.php" method="post">
 <fieldset>
 <legend>Preferred Date/Time</legend>
+<p>
 <label for="date">Date</label>
 <input type="date" id="datetime" placeholder="dd/mm/yyyy" required pattern="\d{2}/\d{2}/\d{4}">
 <br>
+</p>
 <label for="time">Time</label>
 <input type="time"id="time" placeholder="00:00" required pattern="\d{2}:\d{2}">
+</fieldset>
+</form>
+<form action="submit.php" method="post">
+<fieldset>
+<button>Book</button>
+<button>Reset form</button>
+</fieldset>
+</form>
 </fieldset>
 </form>
 </body>
